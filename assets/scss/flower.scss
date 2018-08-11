@@ -1,0 +1,39 @@
+//-===========================
+// import botstrap 
+//===========================
+@import 'bootstrap';
+
+
+//-===========================
+// import base style 
+//===========================
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/general';
+@import 'base/buttons';
+@import 'base/colors';
+@import 'base/form';
+@import 'base/spacing';
+@import 'base/fonts';
+@import 'base/typo';
+
+
+//-===========================
+// import templates style 
+//===========================
+@import 'templates/header';
+@import 'templates/footer';
+@import 'templates/hero';
+@import 'templates/motto';
+
+
+//-===========================
+// import pages style 
+//===========================
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/shop';
+@import 'pages/product';
+@import 'pages/cart';
+@import 'pages/contact';

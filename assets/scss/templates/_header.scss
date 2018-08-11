@@ -1,0 +1,35 @@
+header {
+    .top-ribbon {
+        background: $dark;
+        font-family: $cursive;
+        a {
+            text-decoration: none;
+            color: $white; 
+        }
+        .orders-cart ul {
+            justify-content: flex-end;
+            li {
+                padding-left: $gutter;
+            }
+        }
+    }
+}
+
+.nvbar {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .nvbar-logo {
+        padding: $gutter;
+    }
+    .nvbar-links {
+        .nvbar-links-wrapper {
+            display: flex;
+            .nl {
+                padding: 0 $gutter;
+            }
+        }
+    }
+}

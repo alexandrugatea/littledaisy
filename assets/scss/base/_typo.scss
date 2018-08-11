@@ -1,0 +1,14 @@
+//-===========================
+// fonts 
+//===========================
+
+html {
+    font-size: rem(16); 
+} 
+
+body {
+    font-family: $baseFont;
+    font-size: rem(16);
+    color: $dark;
+    line-height: 1.5;
+}

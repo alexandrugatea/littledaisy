@@ -1,0 +1,52 @@
+.hero {
+    height: $hero;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-content {
+        position: relative;
+        width: 100%;
+        max-width: rem(900);
+        color: $white;
+        text-align: center;
+        padding: $gutter;
+        &:before, &:after {
+            content: '';
+            display:block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0.5;
+        } 
+        &:before {
+            background: rgba($dark, 0.5);
+            top: -(rem(10));
+            left:  -(rem(10));
+        }
+        &:after {
+            border: rem(2) solid $white;
+            top: rem(10);
+            left: rem(10)
+        }
+    }
+    .title, .description, .link {
+        position: relative;
+        z-index: 4;
+    }
+    .title {
+        font-family: $cursive;
+        color: $white;
+        font-size: $heroTitle;
+    }
+    .description {
+        color: $white;
+        font-size: $heroDesc;
+    }
+}
+
+#homepage .hero {
+    height: $heroTall;
+}

@@ -1,0 +1,92 @@
+//-===========================
+// Variables 
+//===========================
+
+// Colors 
+
+$primary:           #1eab1e;
+$accent:            #ba0378;
+$dark:              #111111;
+
+$white:             #ffffff;
+$grey:              #eeeeee;
+$darkerGrey:          darken($grey, 10%);
+
+
+//sizes
+
+$gutter:            rem(40);
+
+
+// typo
+
+$baseFont:          'Josefin Slab', sans-serif;
+$cursive:           'akaDora', cursive;
+$baseSize:          rem(16); 
+
+
+
+
+
+// hero 
+
+$hero:              rem(350);
+$heroTall:          rem(600);
+$heroTitle:         rem(60);
+$heroDesc:          rem(18);
+
+
+// categpry card
+
+$category:          rem(500);
+$categoryTitle:     rem(30);
+
+
+// product card
+
+$productCardHeight:     rem(370);
+$productCardWidth:      rem(300);
+$productCardTitle:      rem(20);
+$productCardPrice:      rem(24);
+$productCardImage:      rem(200);
+
+
+
+//motto
+$motto:             rem(300);
+$mottoText:         rem(40);
+$mottoAuthor:       rem(18);
+
+
+//header
+$navLink:           rem(18);
+$navTop:            rem(24);
+$logoH:             rem(100);
+
+//footer
+
+$footerHead:        rem(18);
+$footerLink:        rem(16);
+$copyright:         rem(12);
+$mapH:              rem(240);
+
+
+// shop
+
+$filter:            rem(18);
+$productTitle:      rem(36);
+$productDetails:    rem(16);
+$productImageBig:   rem(736);
+$productImageSmall: rem(137);
+
+
+// contact page
+
+$contactMap:        rem(500);
+$contactDetails:    rem(24);
+
+
+// forms 
+
+$formH:             rem(40);
+$formSize:           rem(16);

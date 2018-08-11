@@ -1,0 +1,34 @@
+.motto {
+    height: $motto;
+    overflow: hidden;
+    position: relative;
+    background: $dark;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-content {
+        position: relative;
+        z-index: 2;
+        width: 75%;
+        text-align: center;
+        color: $white;
+        mix-blend-mode: overlay;
+        .quote {
+            font-family: $cursive;
+            font-size: $mottoText;
+            color: inherit;
+            margin-bottom: $gutter; 
+            text-shadow: 0px 0px 20px #000;
+        }
+        .author {
+            transform: translateX(100%);
+            font-size: $mottoAuthor;
+            font-weight: bold;
+            display: inline-block;
+            font-style: italic;
+            text-shadow: 0px 0px 10px #000;
+            margin-bottom: 0;
+        }
+    }
+}
