@@ -131,7 +131,7 @@ header {
                     @media #{$lg} {
                         &.active {
                             a {
-                                color: $white; 
+                                color: $accent; 
                             }
                             &:before {
                                 content: '';

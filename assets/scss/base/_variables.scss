@@ -30,7 +30,7 @@ $baseSize:          16;
 $shadow:            0px 3px 5px 0px rgba(0,0,0,0.2), 0px 4px 14px 0px rgba(0,0,0,0.2);
 $shadowHover:       0px 0px 14px 0px rgba(0,0,0,0.3), 0px 6px 14px 0px rgba(0,0,0,0.6);
 
-
+$container:         960;
 
 
 // hero 
@@ -104,7 +104,7 @@ $xss:               "screen and (min-width: 320px) and (max-width: 479px)";
 $xsm:               "screen and (min-width: 480px) and (max-width: 599px)";
 $xsl:               "screen and (min-width: 600px) and (max-width: 767px)";
 $sm:                "screen and (min-width: 768px) and (max-width: 991px)";
-$md:                "screen and (min-width: 991px) and (max-width: 1199px)";
+$md:                "screen and (min-width: 992px) and (max-width: 1199px)";
 $lg:                "screen and (min-width: 1200px)";
 
 $xssm:              "screen and (max-width: 991px)";

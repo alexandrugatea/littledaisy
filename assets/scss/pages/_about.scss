@@ -1,0 +1,112 @@
+#about {
+    .about-us {
+        background: $white;
+    }
+    .images-grid {
+        display: grid;
+        grid-template-columns: fit-content(100%);
+        grid-template-areas: "img1 img1 img2" "img3 img3 img2";
+        @media #{$xs} {
+            grid-template-areas: "img1 img2" "img3 img2";
+        }
+        grid-gap: rem($halfGutter);
+        .image:nth-child(1) {
+            grid-area: img1;
+            height: rem(350);
+            @media #{$xs} {
+                height: rem(100);
+            }
+            @media #{$sm} {
+                height: rem(200);
+            }
+        }
+        .image:nth-child(2) {
+            grid-area: img2;
+            height: rem(720);
+            @media #{$xs} {
+                height: rem(220);
+            }
+            @media #{$sm} {
+                height: rem(420);
+            }
+        }
+        .image:nth-child(3) {
+            grid-area: img3;
+            height: rem(350);
+            @media #{$xs} {
+                height: rem(100);
+            }
+            @media #{$sm} {
+                height: rem(200);
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
+
+.section-container {
+    width: 100%;
+    max-width: rem($container);
+    margin: 0 auto;
+    @media #{$lg} {
+        padding: rem(100 $halfGutter);
+    }
+    @media #{$md} {
+        padding: rem($gutter $halfGutter);
+    }
+    @media #{$xssm} {
+        padding: rem($halfGutter $halfGutter);
+    }
+    .section-title {
+        @include fontSize(20, 24);
+        margin: rem(0 0 $gutter 0);
+        font-weight: 700;
+    }
+    p {
+        @include fontSize($baseSize - 2, $baseSize);
+        margin-bottom: rem($halfGutter);
+        a {
+            color: $primary;
+            text-decoration: underline;
+        }
+    }
+    .list {
+        padding: 0;
+        margin: 0;
+        &-item {
+            margin-bottom: rem($gutter);
+            * {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .numbered {
+        counter-reset: list;
+        .list-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &:before {
+                content: counter(list);
+                counter-increment: list;
+                width: rem($gutter);
+                line-height: rem($gutter);
+                text-align: center;
+                font-size: rem(30);
+                display: block;
+                margin-right: rem($halfGutter);
+                font-weight: 700;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+#how-to-buy {
+    background: $white;
+}
