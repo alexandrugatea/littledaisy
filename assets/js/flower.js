@@ -43,7 +43,18 @@ jQuery(document).ready(function ($) {
     $(window).on('resize', function(){
         footer = $('footer').outerHeight();
         $('main').css('margin-bottom', footer);
-    })
+    });
+
+
+    // show filters on mobile
+
+    $('.list-type').on('click', function(){
+        $(this).siblings('.list').toggleClass('opened');
+    });
+
+    $(document).on('click','.list.opened', function(){
+        $(this).toggleClass('opened');
+    });
 
 
 });

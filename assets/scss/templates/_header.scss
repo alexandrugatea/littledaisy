@@ -13,6 +13,9 @@ header {
         justify-content: center;
         align-items: center;
         height: rem(50);
+        @media #{$xssm} {
+            height: rem(30);
+        }
         a {
             color: $white;
             text-decoration: none;
@@ -84,11 +87,8 @@ header {
         .nvbar-logo {
             img {
                 height: rem(80);
-                @media #{$sm} {
-                    height: rem(60);
-                }
-                @media #{$xs} {
-                    height: rem(50);
+                @media #{$xssm} {
+                    height: rem(45);
                     margin: rem(10 0);
                 }
             }

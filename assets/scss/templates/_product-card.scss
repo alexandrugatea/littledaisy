@@ -24,7 +24,6 @@
             height: rem($productCardImage * 0.75);
         }
         img {
-
             display: block;
             height: 100%;
             object-fit: cover;
@@ -33,9 +32,7 @@
             width: 100%;
             transition: all 0.15s ease-in-out;
         }
-
         .invisible-link {
-
             align-items: center;
             background: rgba($primary, 0.5);
             color: $white;
@@ -50,39 +47,29 @@
             z-index: 2;
             transition: all 0.15s linear;
             text-decoration: none;
-
         }
-
         &:hover {
-
             img {
-                
                 filter: blur(0.1px);
                 transform: scale(1.05);
-
             }
-
-
             .invisible-link {
-
                 opacity: 1;
                 mix-blend-mode: hard-light;
-
             }
-
         }
-        
     }
     &-content {
 
         padding-top: rem($halfGutter);
 
-        .product-title {
+        .product-title a {
             font-weight: 700;
             width: 100%;
             margin-bottom: rem($halfGutter); 
             @include truncate(rem($productCardTitle), 1.1, 1);
             color: $dark;
+            display: block;
             @media #{$xs} {
                 @include truncate(rem($productCardTitle), 1.1, 2);
             }

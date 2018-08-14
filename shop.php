@@ -7,17 +7,39 @@
 
 <main id="shop">
     <?php include ("templates/hero-small.php"); ?>
-
-    <div class="shop-grid">
-        <div 
-            is="product-card" 
-            v-for="slide in slides" 
-            v-bind:title="slide.title" 
-            v-bind:price="slide.price" 
-            v-bind:url="slide.url">
+    <div class="shop-content">
+        <div class="shop-filters-container">
+            <div class="shop-filters">
+                <div class="categories-list">
+                    <div class="list-type">Categorii</div>
+                    <ul class="list">
+                        <li class="list-item active">Toate</li>
+                        <li class="list-item">Categoria 1</li>
+                        <li class="list-item">Categoria 2</li>
+                        <li class="list-item">Categoria 3</li>
+                    </ul>
+                </div>
+                <div class="filters-list">
+                    <div class="list-type">Filtre</div>
+                    <ul class="list">
+                        <li class="list-item">Toate</li>
+                        <li class="list-item">Filtru 1</li>
+                        <li class="list-item">Filtru 2</li>
+                        <li class="list-item">Filtru 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shop-grid">
+            <div 
+                is="product-card" 
+                v-for="slide in slides" 
+                v-bind:title="slide.title" 
+                v-bind:price="slide.price" 
+                v-bind:url="slide.url">
+            </div>
         </div>
     </div>
-
 </main>
 
 
@@ -27,7 +49,7 @@
 
     Vue.component('product-card', {
         template: '\
-        <div class="product-card">\
+        <div class="grid-item"><div class="product-card">\
             <div class="product-card-image">\
                 <img :src="url">\
                 <a href="#!" class="invisible-link">Detalii</a>\
@@ -37,6 +59,7 @@
                 <p class="product-price">{{price}}</p>\
                 <a href="#!" class="button">Adauga in cos</a>\
             </div>\
+        </div>\
         </div>\
         ',
         props: ['title', 'price', 'url']
