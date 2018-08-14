@@ -14,6 +14,8 @@
             slidesToShow: 5,
             slidesToScroll: 1,
             swipeToSlide: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
             responsive: [
                 {
                     breakpoint: 1400,
@@ -42,6 +44,14 @@
                 },
                 {
                     breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,

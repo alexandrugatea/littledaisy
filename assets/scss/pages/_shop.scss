@@ -3,10 +3,10 @@
     margin-left: auto;
     margin-right: auto;
     @media #{$xs} {
-        width: 98%;
+        width: 95%;
     }
     @media #{$sm} {
-        width: 95%;
+        width: 90%;
     }
     @media screen and (min-width:1300px) {
         max-width: rem(1200px);

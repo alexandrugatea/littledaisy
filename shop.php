@@ -52,7 +52,7 @@
         <div class="grid-item"><div class="product-card">\
             <div class="product-card-image">\
                 <img :src="url">\
-                <a href="#!" class="invisible-link">Detalii</a>\
+                <a href="/product.php" class="invisible-link">Detalii</a>\
             </div>\
             <div class="product-card-content">\
                 <p class="product-title" :title=title><a href="/product.php">{{title}}</a></p>\
