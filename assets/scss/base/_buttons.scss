@@ -1,0 +1,42 @@
+.button {
+
+    @include gradient(darken($primary, 5%), lighten($primary, 5%), 0%, 100%);
+    border-radius: 100px;
+    color: $white;
+    display: inline-block;
+    font-weight: 700;
+    line-height: rem(30);
+    min-width: rem(135);
+    outline: none;
+    padding: rem(0 15);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: rem(16);
+    &:hover, &:active, &:focus {
+
+        text-decoration: none;
+        color: $white;
+        outline: none;
+
+    }
+    @media #{$xs} {
+        font-size: rem(14);
+    }
+
+    &:hover {
+
+        @include gradient(darken($primary, 5%), lighten($primary, 5%), 10%, 90%);
+        box-shadow: rem(0 2 18 0) rgba($dark, 0.30);
+
+    }
+
+    &:active {
+
+        @include gradient(darken($primary, 5%), lighten($primary, 5%), 50%, 100%);
+
+    }
+
+
+
+}

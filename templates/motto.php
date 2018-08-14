@@ -4,6 +4,10 @@
         <p class="quote">{{motto.quote}}</p>
         <p class="author">{{motto.author}}</p>
     </div>
+    <div class="motto-content">
+        <p class="quote">{{motto.quote}}</p>
+        <p class="author">{{motto.author}}</p>
+    </div>
 </div>
 
 

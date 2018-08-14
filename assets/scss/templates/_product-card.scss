@@ -1,0 +1,138 @@
+.product-card {
+
+    background: $white;
+    border-radius: rem($border-radius);
+    box-shadow: $shadow;
+    display: block;
+    height: rem($productCardHeight);
+    padding:rem($halfGutter);
+    text-align:  center;
+    width: rem($productCardWidth);
+    transition: all 0.3s ease-in-out;
+
+    @media #{$xs} {
+        padding: rem($halfGutter / 2);
+        height: auto;
+    }
+
+    &-image {
+
+        height: rem($productCardImage);
+        overflow: hidden;
+        position: relative;
+        @media #{$xs} {
+            height: rem($productCardImage * 0.75);
+        }
+        img {
+
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            position: absolute;
+            width: 100%;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .invisible-link {
+
+            align-items: center;
+            background: rgba($primary, 0.5);
+            color: $white;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top:0;
+            width: 100%;
+            z-index: 2;
+            transition: all 0.15s linear;
+            text-decoration: none;
+
+        }
+
+        &:hover {
+
+            img {
+                
+                filter: blur(0.1px);
+                transform: scale(1.05);
+
+            }
+
+
+            .invisible-link {
+
+                opacity: 1;
+                mix-blend-mode: hard-light;
+
+            }
+
+        }
+        
+    }
+    &-content {
+
+        padding-top: rem($halfGutter);
+
+        .product-title {
+            font-weight: 700;
+            width: 100%;
+            margin-bottom: rem($halfGutter); 
+            @include truncate(rem($productCardTitle), 1.1, 1);
+            color: $dark;
+            @media #{$xs} {
+                @include truncate(rem($productCardTitle), 1.1, 2);
+            }
+        }
+
+        .product-price {
+
+            font-size: rem($productCardPrice);
+            color: $accent;
+            margin-bottom: rem($halfGutter);
+            line-height: 1;
+            font-weight: 700;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:after {
+
+                content: "RON";
+                display: block;
+                margin-left: rem(10);
+            }
+
+        }
+
+
+    }
+
+    &:hover {
+
+        box-shadow: $shadowHover;
+
+    }
+}
+
+
+.slick-slide {
+
+    padding: rem($halfGutter);
+
+    @media #{$xs} {
+        padding: rem($halfGutter $halfGutter / 2);
+    }
+
+
+    .product-card {
+
+        width: 100%;
+
+    }
+
+}

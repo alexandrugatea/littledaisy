@@ -1,0 +1,15 @@
+.shop-grid {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+
+    .product-card {
+
+        margin: rem($halfGutter);
+
+    }
+
+}

@@ -1,146 +1,63 @@
 //-===========================
 // font names 
 //===========================
+
+$font-path: '../fonts/';
+
 @font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-Thin.eot');
-    src: local('Josefin Slab Thin'), local('JosefinSlab-Thin'),
-        url('subset-JosefinSlab-Thin.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-Thin.woff2') format('woff2'),
-        url('subset-JosefinSlab-Thin.woff') format('woff'),
-        url('subset-JosefinSlab-Thin.ttf') format('truetype'),
-        url('subset-JosefinSlab-Thin.svg#JosefinSlab-Thin') format('svg');
-    font-weight: 100;
+    font-family: 'GeoSlab';
+    src: url('#{$font-path}GeometricSlab703BT-Medium.eot');
+    src: url('#{$font-path}GeometricSlab703BT-Medium.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}GeometricSlab703BT-Medium.woff2') format('woff2'),
+        url('#{$font-path}GeometricSlab703BT-Medium.woff') format('woff'),
+        url('#{$font-path}GeometricSlab703BT-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-LightItalic.eot');
-    src: local('Josefin Slab Light Italic'), local('JosefinSlab-LightItalic'),
-        url('subset-JosefinSlab-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-LightItalic.woff2') format('woff2'),
-        url('subset-JosefinSlab-LightItalic.woff') format('woff'),
-        url('subset-JosefinSlab-LightItalic.ttf') format('truetype'),
-        url('subset-JosefinSlab-LightItalic.svg#JosefinSlab-LightItalic') format('svg');
-    font-weight: 300;
-    font-style: italic;
-}
 
 @font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-SemiBold.eot');
-    src: local('Josefin Slab SemiBold'), local('JosefinSlab-SemiBold'),
-        url('subset-JosefinSlab-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-SemiBold.woff2') format('woff2'),
-        url('subset-JosefinSlab-SemiBold.woff') format('woff'),
-        url('subset-JosefinSlab-SemiBold.ttf') format('truetype'),
-        url('subset-JosefinSlab-SemiBold.svg#JosefinSlab-SemiBold') format('svg');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-Regular.eot');
-    src: local('Josefin Slab Regular'), local('JosefinSlab-Regular'),
-        url('subset-JosefinSlab-Regular.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-Regular.woff2') format('woff2'),
-        url('subset-JosefinSlab-Regular.woff') format('woff'),
-        url('subset-JosefinSlab-Regular.ttf') format('truetype'),
-        url('subset-JosefinSlab-Regular.svg#JosefinSlab-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-Light.eot');
-    src: local('Josefin Slab Light'), local('JosefinSlab-Light'),
-        url('subset-JosefinSlab-Light.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-Light.woff2') format('woff2'),
-        url('subset-JosefinSlab-Light.woff') format('woff'),
-        url('subset-JosefinSlab-Light.ttf') format('truetype'),
-        url('subset-JosefinSlab-Light.svg#JosefinSlab-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-Italic.eot');
-    src: local('Josefin Slab Italic'), local('JosefinSlab-Italic'),
-        url('subset-JosefinSlab-Italic.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-Italic.woff2') format('woff2'),
-        url('subset-JosefinSlab-Italic.woff') format('woff'),
-        url('subset-JosefinSlab-Italic.ttf') format('truetype'),
-        url('subset-JosefinSlab-Italic.svg#JosefinSlab-Italic') format('svg');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-SemiBoldItalic.eot');
-    src: local('Josefin Slab SemiBold Italic'), local('JosefinSlab-SemiBoldItalic'),
-        url('subset-JosefinSlab-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-SemiBoldItalic.woff2') format('woff2'),
-        url('subset-JosefinSlab-SemiBoldItalic.woff') format('woff'),
-        url('subset-JosefinSlab-SemiBoldItalic.ttf') format('truetype'),
-        url('subset-JosefinSlab-SemiBoldItalic.svg#JosefinSlab-SemiBoldItalic') format('svg');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-BoldItalic.eot');
-    src: local('Josefin Slab Bold Italic'), local('JosefinSlab-BoldItalic'),
-        url('subset-JosefinSlab-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-BoldItalic.woff2') format('woff2'),
-        url('subset-JosefinSlab-BoldItalic.woff') format('woff'),
-        url('subset-JosefinSlab-BoldItalic.ttf') format('truetype'),
-        url('subset-JosefinSlab-BoldItalic.svg#JosefinSlab-BoldItalic') format('svg');
+    font-family: 'GeoSlab';
+    src: url('#{$font-path}GeometricSlab703BT-BoldItalic.eot');
+    src: url('#{$font-path}GeometricSlab703BT-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}GeometricSlab703BT-BoldItalic.woff2') format('woff2'),
+        url('#{$font-path}GeometricSlab703BT-BoldItalic.woff') format('woff'),
+        url('#{$font-path}GeometricSlab703BT-BoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
-@font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-ThinItalic.eot');
-    src: local('Josefin Slab Thin Italic'), local('JosefinSlab-ThinItalic'),
-        url('subset-JosefinSlab-ThinItalic.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-ThinItalic.woff2') format('woff2'),
-        url('subset-JosefinSlab-ThinItalic.woff') format('woff'),
-        url('subset-JosefinSlab-ThinItalic.ttf') format('truetype'),
-        url('subset-JosefinSlab-ThinItalic.svg#JosefinSlab-ThinItalic') format('svg');
-    font-weight: 100;
-    font-style: italic;
-}
+
 
 @font-face {
-    font-family: 'Josefin Slab';
-    src: url('subset-JosefinSlab-Bold.eot');
-    src: local('Josefin Slab Bold'), local('JosefinSlab-Bold'),
-        url('subset-JosefinSlab-Bold.eot?#iefix') format('embedded-opentype'),
-        url('subset-JosefinSlab-Bold.woff2') format('woff2'),
-        url('subset-JosefinSlab-Bold.woff') format('woff'),
-        url('subset-JosefinSlab-Bold.ttf') format('truetype'),
-        url('subset-JosefinSlab-Bold.svg#JosefinSlab-Bold') format('svg');
+    font-family: 'GeoSlab';
+    src: url('#{$font-path}GeometricSlab703BT-Bold.eot');
+    src: url('#{$font-path}GeometricSlab703BT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}GeometricSlab703BT-Bold.woff2') format('woff2'),
+        url('#{$font-path}GeometricSlab703BT-Bold.woff') format('woff'),
+        url('#{$font-path}GeometricSlab703BT-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'GeoSlab';
+    src: url('#{$font-path}GeometricSlab703BT-MediumItalic.eot');
+    src: url('#{$font-path}GeometricSlab703BT-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}GeometricSlab703BT-MediumItalic.woff2') format('woff2'),
+        url('#{$font-path}GeometricSlab703BT-MediumItalic.woff') format('woff'),
+        url('#{$font-path}GeometricSlab703BT-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
 @font-face {
     font-family: 'akaDora';
-    src: url('subset-akaDora.eot');
-    src: local('akaDora'),
-        url('subset-akaDora.eot?#iefix') format('embedded-opentype'),
-        url('subset-akaDora.woff2') format('woff2'),
-        url('subset-akaDora.woff') format('woff'),
-        url('subset-akaDora.ttf') format('truetype'),
-        url('subset-akaDora.svg#akaDora') format('svg');
+    src: url('#{$font-path}akaDora.eot');
+    src: url('#{$font-path}akaDora.eot?#iefix') format('embedded-opentype'),
+        url('#{$font-path}akaDora.woff2') format('woff2'),
+        url('#{$font-path}akaDora.woff') format('woff'),
+        url('#{$font-path}akaDora.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-

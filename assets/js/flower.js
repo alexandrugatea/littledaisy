@@ -11,4 +11,39 @@ jQuery(document).ready(function ($) {
     
     $('main').css('min-height', main);
 
+
+    // navbar toggler mobile
+
+    var toggler = $('header .toggler');
+    var nav = $('header .nvbar-links-wrapper');
+
+    toggler.on('click', function(){
+        nav.toggleClass('opened');
+        $(this).find('.fa').toggleClass('fa-bars fa-times');
+        $('body').toggleClass('lock');
+    });
+
+
+    // add current nav active
+    var path = window.location.pathname.split("/").pop();
+    
+    // Account for home page with empty path
+    if ( path == '/' ) {
+        path = 'index.php';
+    }
+        
+    var target = $('.nvbar-links-wrapper a[href="/'+path+'"]');
+    // Add active class to target link
+    target.parents('.nl').addClass('active');
+
+
+    // create nice efect for footer
+    $('main').css('margin-bottom', footer);
+    
+    $(window).on('resize', function(){
+        footer = $('footer').outerHeight();
+        $('main').css('margin-bottom', footer);
+    })
+
+
 });

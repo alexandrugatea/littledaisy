@@ -1,3 +1,27 @@
+body {
+    background: $grey;
+    position: relative;
+    &.lock {
+        overflow: hidden;
+        main, footer {
+            filter: blur(3px);
+        }
+    }
+    @media #{$xssm} {
+        padding-top: rem(120px);
+    }
+}
+main, footer {
+    transition: all 0.15s ease-in-out;
+}
+
+main {
+    background: inherit;
+    @media #{$xssm} {
+        margin-bottom: 0!important;
+    }
+}
+
 .flex-list {
     display: flex;
 }
@@ -10,7 +34,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    opacity: 0.45;
+    opacity: 1;
     z-index: 1;
 }
 
@@ -18,4 +42,4 @@
     position: relative;
     overflow: hidden;
     z-index: 0;
-}
+} 

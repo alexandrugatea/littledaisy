@@ -15,78 +15,97 @@ $darkerGrey:          darken($grey, 10%);
 
 //sizes
 
-$gutter:            rem(40);
-
-
+$gutter:            40;
+$halfGutter:        20;
+$border-radius:     5;
 // typo
 
-$baseFont:          'Josefin Slab', sans-serif;
+$baseFont:          'GeoSlab', serif;
 $cursive:           'akaDora', cursive;
-$baseSize:          rem(16); 
+$baseSize:          16; 
 
+
+//properties
+
+$shadow:            0px 3px 5px 0px rgba(0,0,0,0.2), 0px 4px 14px 0px rgba(0,0,0,0.2);
+$shadowHover:       0px 0px 14px 0px rgba(0,0,0,0.3), 0px 6px 14px 0px rgba(0,0,0,0.6);
 
 
 
 
 // hero 
 
-$hero:              rem(350);
-$heroTall:          rem(600);
-$heroTitle:         rem(60);
-$heroDesc:          rem(18);
+$hero:              350;
+$heroTall:          600;
+$heroTitle:         60;
+$heroDesc:          18;
 
 
 // categpry card
 
-$category:          rem(500);
-$categoryTitle:     rem(30);
+$category:          500;
+$categoryTitle:     30;
 
 
 // product card
 
-$productCardHeight:     rem(370);
-$productCardWidth:      rem(300);
-$productCardTitle:      rem(20);
-$productCardPrice:      rem(24);
-$productCardImage:      rem(200);
+$productCardHeight:     350;
+$productCardWidth:      280;
+$productCardTitle:      18;
+$productCardPrice:      22;
+$productCardImage:      180;
 
 
 
 //motto
-$motto:             rem(300);
-$mottoText:         rem(40);
-$mottoAuthor:       rem(18);
+$motto:             300;
+$mottoText:         30;
+$mottoAuthor:       18;
 
 
 //header
-$navLink:           rem(18);
-$navTop:            rem(24);
-$logoH:             rem(100);
+$navLink:           18;
+$navTop:            24;
+$logoH:             100;
 
 //footer
 
-$footerHead:        rem(18);
-$footerLink:        rem(16);
-$copyright:         rem(12);
-$mapH:              rem(240);
+$footerHead:        18;
+$footerLink:        16;
+$copyright:         12;
+$mapH:              240;
 
 
 // shop
 
-$filter:            rem(18);
-$productTitle:      rem(36);
-$productDetails:    rem(16);
-$productImageBig:   rem(736);
-$productImageSmall: rem(137);
+$filter:            18;
+$productTitle:      36;
+$productDetails:    16;
+$productImageBig:   736;
+$productImageSmall: 137;
 
 
 // contact page
 
-$contactMap:        rem(500);
-$contactDetails:    rem(24);
+$contactMap:        500;
+$contactDetails:    24;
 
 
 // forms 
 
-$formH:             rem(40);
-$formSize:           rem(16);
+$formH:             40;
+$formSize:          16;
+
+
+//media queries
+
+$xs:                "screen and (max-width: 767px)";
+$xss:               "screen and (min-width: 320px) and (max-width: 479px)";
+$xsm:               "screen and (min-width: 480px) and (max-width: 599px)";
+$xsl:               "screen and (min-width: 600px) and (max-width: 767px)";
+$sm:                "screen and (min-width: 768px) and (max-width: 991px)";
+$md:                "screen and (min-width: 991px) and (max-width: 1199px)";
+$lg:                "screen and (min-width: 1200px)";
+
+$xssm:              "screen and (max-width: 991px)";
+$smmd:              "screen and (min-width: 768px) and (max-width: 1199px)";

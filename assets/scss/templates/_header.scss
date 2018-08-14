@@ -1,34 +1,205 @@
 header {
+    position: relative;
+    @media #{$xssm} {
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        z-index: 2000;
+    }
     .top-ribbon {
         background: $dark;
-        font-family: $cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem(50);
         a {
+            color: $white;
             text-decoration: none;
-            color: $white; 
+            outline: none;
+            font-family: $cursive;
+            font-size: rem(20);
+            transition: all 0.15s ease-in-out;
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: none;
+                outline: none;
+                color: $accent;
+            }
+            @media #{$xs} {
+                font-size: rem(14);
+                white-space: nowrap;
+            }
         }
-        .orders-cart ul {
-            justify-content: flex-end;
-            li {
-                padding-left: $gutter;
+        .container-fluid {
+            width: 100%;
+            .row {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .orders-cart {
+            .flex-list {
+                justify-content: flex-end;
+                align-items: center;
+            }
+            .ocl {
+                margin-left: rem($halfGutter);
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .counter {
+                background: $accent;
+                width:rem(24);
+                height:rem(24);
+                border-radius: rem(24);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+                font-size: rem(16);
+                margin-left: rem(-3);
+                &:empty {
+                    display: none;
+                }
             }
         }
     }
-}
+    .nvbar {
+        display: flex;
+        height: rem(120);
+        @media #{$sm} {
+            height: rem(100);
+        }
+        @media #{$xs} {
+            height: auto;
+        }
+        align-items: center;
+        justify-content: space-between;
+        background: $white;
+        padding: rem(0 $halfGutter); 
+        .nvbar-logo {
+            img {
+                height: rem(80);
+                @media #{$sm} {
+                    height: rem(60);
+                }
+                @media #{$xs} {
+                    height: rem(50);
+                    margin: rem(10 0);
+                }
+            }
+        }
+        .nvbar-links {
+            margin-right: 0 - rem($halfGutter);
+            @media #{$xs} {
+                margin-right: 0;
+            }
+            .nvbar-links-wrapper {
+                display: flex;
+                transition: all 0.3s ease-in-out;
+                .nl {
+                    padding: rem($halfGutter / 2 $halfGutter);
+                    position: relative;
+                    a {
+                        font-size: rem(18);
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        text-decoration: none;
+                        transition: all 0.15s linear;
 
-.nvbar {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    .nvbar-logo {
-        padding: $gutter;
-    }
-    .nvbar-links {
-        .nvbar-links-wrapper {
-            display: flex;
-            .nl {
-                padding: 0 $gutter;
+                        @media #{$sm} {
+                            font-size: rem(16);
+                        }
+
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            text-decoration: none;
+                        }
+                        &:hover {
+                            color: $accent;
+                        }
+                        &:active {
+                            color: darken($accent, 10%);
+                        }
+
+                    }
+                    @media #{$lg} {
+                        &.active {
+                            a {
+                                color: $white; 
+                            }
+                            &:before {
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                border-left: rem(10) solid transparent;
+                                border-right: rem(10) solid transparent;
+                                border-top: rem(7) solid $accent;
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                }
+
+                @media #{$xs} {
+                    position: fixed;
+                    top:50%;
+                    left: 50%;
+                    transform: translate(-50%,-20%);
+                    background: $accent;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: rem(240);
+                    height: auto;
+                    z-index: -1;
+                    opacity: 0;
+                    pointer-events: none;
+                    box-shadow: rem(0px 200px 200px 10px) rgba(0,0,0,0.5);
+                    .nl{
+                        margin-left: 0;
+                        padding: rem($halfGutter 0);
+                        width: 100%;
+                        text-align: center;
+                        border-bottom: 1px solid darken($accent, 10%);
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        a {
+                            color: $white;
+                            font-size: rem(14);
+                            &:active {
+                                color: $white;
+                            } 
+                        }
+                        &.active {
+                            background: rgba($dark, 0.2);
+                        }
+                    }
+                }
+                &.opened {
+                    transform: translate(-50%, -40%);
+                    z-index: 1000000;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
+            }
+            .toggler {
+                border: none;
+                background: transparent;
+                width: rem(40);
+                line-height: rem(40);
+                outline: none;
+                text-align: right;
             }
         }
     }

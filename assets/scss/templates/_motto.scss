@@ -1,5 +1,5 @@
 .motto {
-    height: $motto;
+    min-height: rem($motto);
     overflow: hidden;
     position: relative;
     background: $dark;
@@ -7,28 +7,63 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: rem($gutter);
+
+    @media #{$xs} {
+        padding: rem($halfGutter / 2);
+        min-height: auto;
+    }
+
+
+    .is-background {
+
+        opacity: 0.45;
+
+    }
     &-content {
         position: relative;
         z-index: 2;
-        width: 75%;
+        padding: rem($gutter);
+        width: 100%;
         text-align: center;
         color: $white;
-        mix-blend-mode: overlay;
+        mix-blend-mode: soft-light;
+        @media #{$xs} {
+            padding: rem($halfGutter / 2);
+        }
         .quote {
             font-family: $cursive;
-            font-size: $mottoText;
+            @include fontSize($mottoText - 12, $mottoText);
             color: inherit;
-            margin-bottom: $gutter; 
-            text-shadow: 0px 0px 20px #000;
+            margin-bottom: rem($gutter); 
+            @media #{$xs} {
+                margin-bottom: rem($halfGutter / 2); 
+                line-height: 1.1;
+            }
         }
         .author {
             transform: translateX(100%);
-            font-size: $mottoAuthor;
+            @include fontSize($mottoAuthor - 6, $mottoAuthor);
             font-weight: bold;
             display: inline-block;
             font-style: italic;
-            text-shadow: 0px 0px 10px #000;
             margin-bottom: 0;
+            @media #{$xs} {
+                transform: translateX(0%); 
+            }
+        }
+        &:last-child { 
+            position: absolute;
+            mix-blend-mode: overlay;
+            opacity: 0.9;
+            justify-content: center;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            padding: rem($gutter * 2);
+            @media #{$xs} {
+                padding: rem($halfGutter);
+            }
         }
     }
 }

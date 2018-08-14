@@ -1,0 +1,104 @@
+.category {
+
+    margin: rem($gutter $gutter / 2);
+    background: $white;
+    border-radius: rem($border-radius);
+    box-shadow: $shadow;
+    transition: all 0.3s linear;
+    padding: rem($gutter);
+    max-width: rem($category);
+    position: relative;
+
+    @media #{$xssm} {
+        padding: rem($halfGutter / 2);
+        margin: rem($halfGutter / 2);
+    }
+    @media #{$md} {
+        padding: rem($gutter / 2);
+        margin: rem($gutter / 2);
+    }
+
+    &-image {
+
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        position: relative;
+        
+        img {
+
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            z-index: 1;
+
+        }
+
+    }
+
+    &-title {
+
+        position: absolute;
+        top:50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        padding: rem($gutter 0);
+        background: rgba($dark, 0.5);
+        color: $white;
+        z-index: 2;
+        text-align: center;
+        font-weight: bold;
+        @include fontSize($categoryTitle - 10, $categoryTitle);
+        margin: 0;
+        @media #{$xssm} {
+            padding: rem($halfGutter 0);
+        }
+
+    }
+
+    .button {
+
+        position: absolute;
+        bottom: rem($gutter);
+        transform: translate(-50%, 50%);
+        left: 50%;
+
+    }
+
+}
+
+
+.categories {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   padding: rem($gutter*2 $gutter);
+   
+   @media #{$xssm} {
+       padding: rem($gutter);
+       flex-wrap: wrap;
+   }
+   @media #{$md} {
+    padding: rem($gutter);
+   }
+
+
+   .category {
+
+    flex-grow: 1;
+    @media #{$xs} {
+        width: 100%;
+        max-width: rem(280);
+        flex-grow: 0;
+    }
+
+   }
+
+}

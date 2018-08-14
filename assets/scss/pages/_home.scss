@@ -1,0 +1,31 @@
+#homepage {
+
+    .hero {
+        height: rem($heroTall);
+        @media #{$xs} {
+            height: auto;
+            padding: rem($gutter 0);
+        }
+        .title {
+            @include fontSize($heroTitle - 36, $heroTitle);
+        }
+    }
+
+    .products-slider {
+
+        padding: rem(100 0);
+        background:$accent;
+
+        @media #{$xs} {
+            padding: rem(0 0 $halfGutter 0);
+        }
+        @media #{$sm} {
+            padding: rem($halfGutter 0);
+        }
+        @media #{$md} {
+            padding: rem($gutter 0);
+        }
+
+    }
+
+}
