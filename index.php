@@ -39,7 +39,7 @@
     el: '#homepage',
     data: {
         hero: {
-            title: 'Little Daisy',
+            title: 'Little Daisy Flower Shop',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et feugiat leo. In suscipit lobortis sem non commodo. Aenean fringilla molestie dui, at egestas leo. Integer fringilla, metus in eleifend accumsan, metus tellus fringilla justo',
             label: 'Vezi Produse',
             link: 'pages/shop.php',
